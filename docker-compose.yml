@@ -25,7 +25,8 @@ services:
       - "5001:5000"
     # Only run after postgresql is started and healthcheck is successful
     depends_on:
-      - postgresql
+      postgresql:
+        condition: service_healthy
   postgresql:
     image: postgres:15-alpine
     environment:
