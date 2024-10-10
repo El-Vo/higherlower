@@ -1,5 +1,5 @@
-import Header from './components/Header';
-import CenterCard from './components/centerCard';
+import Header from './components/header';
+import Animated_Card from './components/animated_card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/globals.css';
 import React from "react";
@@ -14,10 +14,10 @@ export default function Home() {
                       Lower
                   </div>
               </div>
-              <CenterCard/>
+              <Animated_Card/>
               <div className=" column text-style d-flex align-items-center justify-content-center">
                   <div>
-                      Higher
+                      Higher3
                   </div>
               </div>
           </div>

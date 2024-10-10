@@ -4,14 +4,14 @@ services:
     image: node:lts-alpine
     working_dir: /home/node/app
     volumes:
-      - ./frontend:/home/node/app
+      - type: bind
+        source: ./frontend
+        target: /home/node/app
     ports:
       # Expose node port (3000) to localhost:80
-      # This allows access in browser through http://localhost without specific port
+      # This allows access in browser through http://localhost:80
       - "80:3000"
     command: sh -c "npm install --include=dev && npm run dev"
-    environment:
-      - CHOKIDAR_USEPOLLING=true
     # Only start after backend is fully up
     depends_on:
       - backend
