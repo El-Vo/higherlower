@@ -1,6 +1,13 @@
 # How to try out your project
 
-To __run__ the project, open a `terminal` in your projects root-folder and then run the following command:
+To __run__ the project you need to create a .env file in the same directory as the docker-compose file containing these three variables:
+```env
+POSTGRES_USER=my_user
+POSTGRES_PASSWORD=my_password
+POSTGRES_DB=my_database
+```
+
+Now, open a `terminal` in your projects root-folder and then run the following command:
 ```bash
 docker compose up --force-recreate
 ```
