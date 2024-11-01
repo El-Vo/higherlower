@@ -1,26 +1,21 @@
-import Header from './components/Header';
-import CenterCard from './components/centerCard';
+'use client'
+
+import Header from './components/header';
+import ImageCards from './components/imageCards';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/globals.css';
-import React from "react";
 
 export default function Home() {
-  return (
-      <div>
-        <Header/>
-          <div className="d-flex justify-content-between">
-              <div className="column text-style d-flex align-items-center justify-content-center">
-                  <div>
-                      Lower
-                  </div>
-              </div>
-              <CenterCard/>
-              <div className=" column text-style d-flex align-items-center justify-content-center">
-                  <div>
-                      Higher
-                  </div>
-              </div>
-          </div>
-      </div>
-  );
+
+    return (
+        <div>
+            <Header/>
+            <div className="d-flex justify-content-between">
+                <ImageCards
+                    caption="Linke Auswahl"
+                    answer="1.500.000"
+                />
+            </div>
+        </div>
+    );
 }
